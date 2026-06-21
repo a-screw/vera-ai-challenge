@@ -316,3 +316,17 @@ def teardown():
     return {
         "success": True
     }
+
+
+@app.get("/")
+def home():
+
+    return {
+        "service": "Magicpin Vera AI Challenge Bot",
+        "status": "running",
+        "team": "Ashwani Kumar Jha",
+        "version": "1.0",
+        "docs": "/docs",
+        "health": "/v1/healthz",
+        "metadata": "/v1/metadata"
+    }
